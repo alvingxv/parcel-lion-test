@@ -1,0 +1,1154 @@
+{
+	"info": {
+		"_postman_id": "1d31a4e1-f810-4229-abd8-0885de402eac",
+		"name": "lion-parcel-test-Alvian Ghifari",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23769220"
+	},
+	"item": [
+		{
+			"name": "Admin Routes",
+			"item": [
+				{
+					"name": "Create Movie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "file",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "postman-cloud:///1efafd17-b0ba-40c0-94e5-c38865b853a3"
+								},
+								{
+									"key": "json",
+									"value": "{\n    \"title\": \"adminmovie\",\n    \"description\": \"admin Description\",\n    \"duration\": 120,\n    \"artists\": \"Artist1, Artist2\",\n    \"genres\": \"software\"\n}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/admin/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Movie",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "file",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "postman-cloud:///1efafd17-b0ba-40c0-94e5-c38865b853a3"
+										},
+										{
+											"key": "json",
+											"value": "{\n    \"title\": \"adminmovie\",\n    \"description\": \"admin Description\",\n    \"duration\": 120,\n    \"artists\": \"Artist1, Artist2\",\n    \"genres\": \"software\"\n}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/admin/movies",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 16:38:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response_code\": \"00\",\n    \"response_desc\": \"Success Create Movie\",\n    \"response_data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Movie",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "file",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "postman-cloud:///1efafd17-b0ba-40c0-94e5-c38865b853a3"
+								},
+								{
+									"key": "json",
+									"value": "{\n    \"title\": \"edited by admin\",\n    \"description\": \"Description edited by admin\",\n    \"duration\": 120,\n    \"artists\": \"Artist1, Artist2\",\n    \"genres\": \"edited\"\n}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/admin/movies/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"movies",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Most Viewed Movie",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "file",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/admin/movies/most_viewed",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"movies",
+								"most_viewed"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Most Viewed Movie",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "file",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/api/v1/admin/movies/most_viewed",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"movies",
+										"most_viewed"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 16:39:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "278"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response_code\": \"00\",\n    \"response_desc\": \"Success get most viewed movie\",\n    \"response_data\": {\n        \"id\": \"4\",\n        \"title\": \"Movie Title\",\n        \"description\": \"Movie Description\",\n        \"duration\": 120,\n        \"artists\": \"Artist1, Artist2\",\n        \"genres\": \"Action\",\n        \"watch_url\": \"localhost:8080/movies/logo-bundar.png\",\n        \"views\": 13\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Most VIewed Movie Genre",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "file",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/admin/movies/most_viewed_genre",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"movies",
+								"most_viewed_genre"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Most VIewed Movie Genre",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "file",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/api/v1/admin/movies/most_viewed_genre",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"movies",
+										"most_viewed_genre"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 16:39:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "128"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response_code\": \"00\",\n    \"response_desc\": \"Success get most viewed genre movie\",\n    \"response_data\": {\n        \"views_count\": 23,\n        \"genre\": \"Action\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Most Voted Movie",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "file",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/admin/movies/most_voted",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"movies",
+								"most_voted"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Most Voted Movie",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "file",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/api/v1/admin/movies/most_voted",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"movies",
+										"most_voted"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 16:39:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "284"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response_code\": \"00\",\n    \"response_desc\": \"Success get most viewed movie\",\n    \"response_data\": {\n        \"id\": \"5\",\n        \"title\": \"DramaTitle\",\n        \"description\": \"Drama Description\",\n        \"duration\": 120,\n        \"artists\": \"Artist1, Artist2\",\n        \"genres\": \"Drama\",\n        \"watch_url\": \"localhost:8080/movies/logo-bundar.png\",\n        \"views\": 2,\n        \"vote\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Most Voted Genre",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "file",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/admin/movies/most_voted_genre",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"movies",
+								"most_voted_genre"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Most Voted Genre",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "file",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/api/v1/admin/movies/most_voted_genre",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"movies",
+										"most_voted_genre"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 16:30:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "125"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response_code\": \"00\",\n    \"response_desc\": \"Success get most voted genre movie\",\n    \"response_data\": {\n        \"votes_count\": 1,\n        \"genre\": \"Drama\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImV4cCI6MTczMzEwNzA0MH0.aa33xdC6A6eH_HhL18FZxGb3Ce-X3xldmp3l7Wrzi1k",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Authenticated Users",
+			"item": [
+				{
+					"name": "Vote",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movie_id\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/movies/vote",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"vote"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "already voted",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"movie_id\": 7\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/movies/vote",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										"vote"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 16:42:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "109"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response_code\": \"AV\",\n    \"response_desc\": \"Already Voted\",\n    \"response_data\": {\n        \"error\": \"duplicate constraint error\"\n    }\n}"
+						},
+						{
+							"name": "Vote",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"movie_id\": 7\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/movies/vote",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										"vote"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 16:43:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response_code\": \"00\",\n    \"response_desc\": \"Success vote\",\n    \"response_data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Unvote",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movie_id\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/movies/unvote",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"unvote"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unvote",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"movie_id\": 7\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/movies/unvote",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										"unvote"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 16:44:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response_code\": \"00\",\n    \"response_desc\": \"Success unVote\",\n    \"response_data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "All Votes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/movies/votes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"votes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All Votes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/movies/votes",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										"votes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 16:44:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "298"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response_code\": \"00\",\n    \"response_desc\": \"Success get voted movie\",\n    \"response_data\": {\n        \"movies\": [\n            {\n                \"id\": \"7\",\n                \"title\": \"edited by admin\",\n                \"description\": \"Description edited by admin\",\n                \"duration\": 120,\n                \"artists\": \"Artist1, Artist2\",\n                \"genres\": \"edited\",\n                \"watch_url\": \"localhost:8080/movies/logo-bundar.png\",\n                \"views\": 0\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiZXhwIjoxNzMzMTA2OTUwfQ.i75fyeRkYLVhJjgVfJYxIJbxZKn3kwgFIdSsoosHN8k",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user@gmail.com\",\r\n    \"name\": \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@gmail.com\",\r\n    \"name\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 01 Dec 2024 16:35:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "78"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response_code\": \"00\",\n    \"response_desc\": \"Success Register\",\n    \"response_data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 01 Dec 2024 16:35:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "220"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response_code\": \"00\",\n    \"response_desc\": \"Success Login\",\n    \"response_data\": {\n        \"jwt\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiZXhwIjoxNzMzMTA2OTUwfQ.i75fyeRkYLVhJjgVfJYxIJbxZKn3kwgFIdSsoosHN8k\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Movie List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "file",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/v1/movies?page=1&pageSize=12&search",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "12"
+						},
+						{
+							"key": "search",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Movie List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "file",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/movies?page=1&pageSize=12&search",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"movies"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "12"
+								},
+								{
+									"key": "search",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 01 Dec 2024 16:35:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "928"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response_code\": \"00\",\n    \"response_desc\": \"Success get movie\",\n    \"response_data\": {\n        \"movies\": [\n            {\n                \"id\": \"3\",\n                \"title\": \"updateTitle\",\n                \"description\": \"Movie Description\",\n                \"duration\": 120,\n                \"artists\": \"update, Artist2\",\n                \"genres\": \"Action\",\n                \"watch_url\": \"localhost:8080/movies/logo-bundar.png\",\n                \"views\": 10\n            },\n            {\n                \"id\": \"4\",\n                \"title\": \"Movie Title\",\n                \"description\": \"Movie Description\",\n                \"duration\": 120,\n                \"artists\": \"Artist1, Artist2\",\n                \"genres\": \"Action\",\n                \"watch_url\": \"localhost:8080/movies/logo-bundar.png\",\n                \"views\": 13\n            },\n            {\n                \"id\": \"5\",\n                \"title\": \"DramaTitle\",\n                \"description\": \"Drama Description\",\n                \"duration\": 120,\n                \"artists\": \"Artist1, Artist2\",\n                \"genres\": \"Drama\",\n                \"watch_url\": \"localhost:8080/movies/logo-bundar.png\",\n                \"views\": 2\n            },\n            {\n                \"id\": \"6\",\n                \"title\": \"DramaTitle\",\n                \"description\": \"Drama Description\",\n                \"duration\": 120,\n                \"artists\": \"Artist1, Artist2\",\n                \"genres\": \"Drama\",\n                \"watch_url\": \"localhost:8080/movies/logo-bundar.png\",\n                \"views\": 0\n            }\n        ],\n        \"pagination_data\": {\n            \"currentPage\": 1,\n            \"pageSize\": 12,\n            \"totalItems\": 4,\n            \"totalPages\": 1\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Search Movie",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "file",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/v1/movies/search?keyword=artist1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "artist1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search Movie",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "file",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/movies/search?keyword=artist1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "artist1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 01 Dec 2024 16:36:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "657"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response_code\": \"00\",\n    \"response_desc\": \"Success get movie\",\n    \"response_data\": {\n        \"movies\": [\n            {\n                \"id\": \"4\",\n                \"title\": \"Movie Title\",\n                \"description\": \"Movie Description\",\n                \"duration\": 120,\n                \"artists\": \"Artist1, Artist2\",\n                \"genres\": \"Action\",\n                \"watch_url\": \"localhost:8080/movies/logo-bundar.png\",\n                \"views\": 13\n            },\n            {\n                \"id\": \"5\",\n                \"title\": \"DramaTitle\",\n                \"description\": \"Drama Description\",\n                \"duration\": 120,\n                \"artists\": \"Artist1, Artist2\",\n                \"genres\": \"Drama\",\n                \"watch_url\": \"localhost:8080/movies/logo-bundar.png\",\n                \"views\": 2\n            },\n            {\n                \"id\": \"6\",\n                \"title\": \"DramaTitle\",\n                \"description\": \"Drama Description\",\n                \"duration\": 120,\n                \"artists\": \"Artist1, Artist2\",\n                \"genres\": \"Drama\",\n                \"watch_url\": \"localhost:8080/movies/logo-bundar.png\",\n                \"views\": 0\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/movies/logo-bundar.png",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"logo-bundar.png"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

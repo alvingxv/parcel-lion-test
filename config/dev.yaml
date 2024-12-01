@@ -1,0 +1,12 @@
+app:
+  name: "movie_app"
+  port: "8080"
+
+database:
+  host: "localhost" # ENV: APP_DATABASE_HOST
+  port: 5432
+  username: "your_username"
+  password: "your_password"
+
+jwt:
+  secret_key: "12345" # ENV: APP_DATABASE_HOST
